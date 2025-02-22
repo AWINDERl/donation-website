@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up for Donation</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 50px;
+        }
+        .form-input {
+            margin: 10px;
+            padding: 10px;
+            width: 300px;
+        }
+        .button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 10px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h1>Sign Up for Recurring Donation</h1>
+    <form id="donationForm">
+        <input type="text" id="username" class="form-input" placeholder="ID" required><br>
+        <input type="password" id="password" class="form-input" placeholder="Password" required><br>
+        <input type="email" id="email" class="form-input" placeholder="Email" required><br>
+        <button type="button" class="button" onclick="submitForm()">Submit</button>
+    </form>
+
+    <script>
+        function submitForm() {
+            // In a real scenario, you would use Firebase or other service to store user data here.
+            window.location.href = 'payment.html'; // Redirect to payment page after form submission
+        }
+    </script>
+</body>
+</html>
